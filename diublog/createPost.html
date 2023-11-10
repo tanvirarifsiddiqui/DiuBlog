@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DIU Blog</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background-color: #f0f5f5;
+      color: #333;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #008080;
+      color: #fff;
+    }
+
+    .logo img {
+      width: 150px;
+    }
+
+    .logo h1 {
+      font-size: 24px;
+      margin-left: 10px;
+    }
+
+    .options {
+      position: relative;
+    }
+
+    .options .dropdown-menu {
+      right: 0;
+      left: auto;
+    }
+
+    .cover-photo img {
+      width: 100%;
+    }
+
+    .navigation {
+      background-color: #008080;
+      color: #fff;
+      padding: 10px;
+    }
+
+    .navigation a {
+      color: #fff;
+      margin-right: 10px;
+    }
+
+    .blog-post {
+      margin-top: 20px;
+    }
+
+    .blog-post h3 {
+      color: #008080;
+    }
+
+    .related-news {
+      margin-top: 30px;
+    }
+
+    .related-news img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .related-news h4 {
+      color: #008080;
+      margin-bottom: 5px;
+    }
+
+    .footer {
+      background-color: #008080;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .footer ul li {
+      margin-bottom: 10px;
+    }
+
+    .copy-right {
+      background-color: #005959;
+      color: #fff;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="images/diulogoside.png" alt="DIU Logo" />
+    </div>
+    <div class="logo">
+      <h1>DIU Blog</h1>
+    </div>
+    <div class="options">
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="cover-photo">
+      <img src="images/diuCover.jpg" alt="University Cover Photo" />
+    </div>
+
+    <nav class="navigation">
+      <a href="/diublog/" class="active">Home</a>
+      <a href="campus.php">Campus</a>
+      <a href="academic.php">Academics</a>
+      <a href="admission.php">Admissions</a>
+      <a href="application.php">International Applications</a>
+      <a href="notices.php">News &amp; Notices</a>
+      <a href="research.php">Research</a>
+      <a href="about.php">About</a>
+    </nav>
+
+    <!-- Blog Post Form -->
+    <section class="blog-post">
+      <h3>Create a Blog Post</h3>
+      <form action="save_post.php" method="POST">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" name="name" required />
+          <div class="form-group">
+            <label for="category">Category:</label>
+            <select name="category" id="category" class="form-control">
+              <option value="Campus">Campus</option>
+              <option value="Academics">Academics</option>
+              <option value="Admissions">Admissions</option>
+              <option value="International Applications">International Applications</option>
+              <option value="News & Notices">News &amp; Notices</option>
+              <option value="Research">Research</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="headline">Headline:</label>
+            <input type="text" class="form-control" id="headline" name="headline" required />
+          </div>
+          <div class="form-group">
+            <label for="post">Post:</label>
+            <textarea type="text" class="form-control" id="post" name="post" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </section>
+
+    <section class="related-news">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="images/warterfall.jpg" alt="Related Post Image" />
+          <h4>Diu Waterfall Hill</h4>
+          <p>Published Date: April 18, 2023</p>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-sm-6">
+              <img src="images/focus.jpg" alt="Related Post Image" />
+              <h4>Related News Headline 2</h4>
+              <p>Published Date: April 17, 2023</p>
+            </div>
+            <div class="col-sm-6">
+              <img src="images/Blue_Mosque.jpg" alt="Related Post Image" />
+              <h4>Related News Headline 3</h4>
+              <p>Published Date: April 16, 2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>Contacts</h5>
+          <ul>
+            <li>Phone: 123-456-7890</li>
+            <li>Email: info@diublog.com</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Campus Life</h5>
+          <ul>
+            <li>Events</li>
+            <li>Clubs &amp; Organizations</li>
+            <li>Sports</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Important Links</h5>
+          <ul>
+            <li>About Us</li>
+            <li>Terms &amp; Conditions</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+        <div class="col-md-3 cover-photo">
+          <h5>Map</h5>
+          <img src="images/map.png" alt="" srcset="" />
+          <p>Daffodil Smart City, Birulia 1216</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="copy-right text-center">
+    &copy; 2023 DIU Blog. All rights reserved.
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
